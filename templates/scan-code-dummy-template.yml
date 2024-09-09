@@ -1,0 +1,23 @@
+# ----------------------------------------------------------------------------------------------------
+# Code Scanning Template
+# ----------------------------------------------------------------------------------------------------
+jobs:
+- job: DevSecOpsScanJob
+  displayName: DevSecOps Scan Job 
+  steps:
+  - task: CmdLine@2
+    displayName: 'Scan Dummy'
+    inputs:
+      script: |
+        echo "This step simulates a code scan step..."
+  # ------------------------------------------------------------------------------------------------------------------------
+  # The following tasks are commented out for this lab, but can be uncommented and used in a real-world scenario!
+  # ------------------------------------------------------------------------------------------------------------------------
+  # - task: UseDotNet@2
+  #   displayName: 'Use dotnet 8.0'
+  #   inputs:
+  #     version: 8.0.x
+
+  # - task: MicrosoftSecurityDevOps@1
+  #   displayName: 'Run Microsoft Security DevOps'
+  #   continueOnError: true
